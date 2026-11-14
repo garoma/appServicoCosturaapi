@@ -1,0 +1,12 @@
+<Solution>
+  <Folder Name="/Itens de Solução/">
+    <File Path=".gitignore" />
+    <File Path="importante.txt" />
+  </Folder>
+  <Folder Name="/src/">
+    <Project Path="appServicosCostura.Application/appServicosCostura.Application.csproj" />
+    <Project Path="appServicosCostura.Domain/appServicosCostura.Domain.csproj" />
+    <Project Path="appServicosCostura.Infrastructure/appServicosCostura.Infrastructure.csproj" />
+    <Project Path="appServicosCostura.API/appServicosCostura.API.csproj" />
+  </Folder>
+</Solution>
