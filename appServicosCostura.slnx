@@ -1,12 +1,18 @@
 <Solution>
   <Folder Name="/Itens de Solução/">
     <File Path=".gitignore" />
+    <File Path="Catálogo de serviços especializados.txt" />
+    <File Path="Catálogo inicial.txt" />
+    <File Path="confecção deseja produzir 100 calças jeans.txt" />
+    <File Path="Exemplos de fabricação por tipo de peça.txt" />
+    <File Path="FluxoFabricacao.txt" />
     <File Path="importante.txt" />
+    <File Path="tabela de preços.txt" />
   </Folder>
   <Folder Name="/src/">
+    <Project Path="appServicosCostura.API/appServicosCostura.API.csproj" />
     <Project Path="appServicosCostura.Application/appServicosCostura.Application.csproj" />
     <Project Path="appServicosCostura.Domain/appServicosCostura.Domain.csproj" />
     <Project Path="appServicosCostura.Infrastructure/appServicosCostura.Infrastructure.csproj" />
-    <Project Path="appServicosCostura.API/appServicosCostura.API.csproj" />
   </Folder>
 </Solution>

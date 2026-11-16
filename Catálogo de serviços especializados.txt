@@ -1,0 +1,19 @@
+2. Catálogo de serviços especializados
+Aqui está a parte mais importante para seu aplicativo: os serviços que podem ser contratados separadamente.
+Categoria		Serviços
+Corte			Corte manual, corte industrial, enfesto, risco
+Costura			Reta, overloque, interloque, galoneira
+Bolsos			Bolso dianteiro, traseiro, embutido
+Cós				Preparação, montagem e aplicação de cós
+Fechamento		Fechamento lateral, entrepernas, ombros
+Acabamento		Bainha, barra, limpeza de fios
+Travete			Reforço de bolsos, passantes e pontos de tensão
+Caseado			Abertura e acabamento de casas
+Botões			Pregar botão, rebite, botão de pressão
+Zíper			Aplicação e substituição de zíper
+Pesponto		Pesponto simples e duplo
+Lavanderia		Stone wash, delavê, amaciamento, tingimento
+Customização	Puídos, lixados, bigodes e efeitos
+Revisão			Inspeção, medição e correção
+Passadoria		Passar e preparar peças
+Embalagem		Dobrar, etiquetar e ensacar

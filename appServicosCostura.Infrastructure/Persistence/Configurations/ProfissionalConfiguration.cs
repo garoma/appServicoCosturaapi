@@ -72,17 +72,6 @@ public sealed class ProfissionalConfiguration
             .HasColumnName("ponto_referencia")
             .HasMaxLength(200);
 
-        // Dados profissionais
-        builder.Property(p => p.Categoria)
-            .HasColumnName("categoria")
-            .HasMaxLength(100)
-            .IsRequired();
-
-        builder.Property(p => p.PrecoBase)
-            .HasColumnName("preco_base")
-            .HasPrecision(10, 2)
-            .IsRequired();
-
         builder.Property(p => p.Servicos)
             .HasColumnName("servicos")
             .HasColumnType("text[]")
@@ -92,6 +81,15 @@ public sealed class ProfissionalConfiguration
             .HasColumnName("pecas")
             .HasColumnType("text[]")
             .IsRequired();
+
+        // Foto do profissional
+        builder.Property(p => p.Foto)
+            .HasColumnName("foto")
+            .HasColumnType("bytea");
+
+        builder.Property(p => p.FotoContentType)
+            .HasColumnName("foto_content_type")
+            .HasColumnType("text");
 
         builder.HasIndex(p => p.Telefone);
     }

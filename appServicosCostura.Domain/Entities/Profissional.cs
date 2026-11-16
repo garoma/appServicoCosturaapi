@@ -28,11 +28,11 @@ public class Profissional
 
     public string? PontoReferencia { get; private set; }
 
+    public byte[]? Foto { get; private set; }
+
+    public string? FotoContentType { get; private set; }
+
     // Dados profissionais
-    public string Categoria { get; private set; } = string.Empty;
-
-    public decimal PrecoBase { get; private set; }
-
     public List<string> Servicos { get; private set; } = [];
 
     public List<string> Pecas { get; private set; } = [];
@@ -44,8 +44,6 @@ public class Profissional
     public Profissional(
         string nome,
         string telefone,
-        string categoria,
-        decimal precoBase,
         string? email = null,
         string? endereco = null,
         string? bairro = null,
@@ -61,17 +59,9 @@ public class Profissional
         if (string.IsNullOrWhiteSpace(telefone))
             throw new ArgumentException("O telefone é obrigatório.");
 
-        if (string.IsNullOrWhiteSpace(categoria))
-            throw new ArgumentException("A categoria é obrigatória.");
-
-        if (precoBase < 0)
-            throw new ArgumentException("O preço base não pode ser negativo.");
-
         Id = Guid.NewGuid();
         Nome = nome.Trim();
         Telefone = telefone.Trim();
-        Categoria = categoria.Trim();
-        PrecoBase = precoBase;
 
         Email = string.IsNullOrWhiteSpace(email) ? null : email.Trim();
 
@@ -94,11 +84,62 @@ public class Profissional
         CriadoEmUtc = DateTime.UtcNow;
     }
 
+
+    public void AtualizarPerfil(
+        string nome,
+        string telefone,
+        string? email,
+        string? endereco,
+        string? bairro,
+        string? cidade,
+        string? cep,
+        string? pontoReferencia,
+        IEnumerable<string>? servicos,
+        IEnumerable<string>? pecas)
+    {
+        if (string.IsNullOrWhiteSpace(nome))
+            throw new ArgumentException("O nome é obrigatório.");
+
+        if (string.IsNullOrWhiteSpace(telefone))
+            throw new ArgumentException("O telefone é obrigatório.");
+
+        Nome = nome.Trim();
+        Telefone = telefone.Trim();
+        Email = string.IsNullOrWhiteSpace(email) ? null : email.Trim();
+
+        Endereco = endereco?.Trim() ?? string.Empty;
+        Bairro = bairro?.Trim() ?? string.Empty;
+        Cidade = cidade?.Trim() ?? string.Empty;
+        Cep = cep?.Trim() ?? string.Empty;
+
+        PontoReferencia = string.IsNullOrWhiteSpace(pontoReferencia)
+            ? null
+            : pontoReferencia.Trim();
+
+        Servicos = servicos?
+            .Where(x => !string.IsNullOrWhiteSpace(x))
+            .Select(x => x.Trim())
+            .Distinct()
+            .ToList() ?? [];
+
+        Pecas = pecas?
+            .Where(x => !string.IsNullOrWhiteSpace(x))
+            .Select(x => x.Trim())
+            .Distinct()
+            .ToList() ?? [];
+    }
+    
     public void DefinirSenhaHash(string senhaHash)
     {
         if (string.IsNullOrWhiteSpace(senhaHash))
             throw new ArgumentException("O hash da senha é obrigatório.");
 
         SenhaHash = senhaHash;
+    }
+
+    public void DefinirFoto(byte[]? foto, string? contentType)
+    {
+        Foto = foto;
+        FotoContentType = foto is null ? null : contentType;
     }
 }

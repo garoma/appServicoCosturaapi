@@ -52,7 +52,7 @@ namespace appServicosCostura.Infrastructure.Migrations
                     b.HasIndex("Email")
                         .IsUnique();
 
-                    b.ToTable("AdminUsers", (string)null);
+                    b.ToTable("adminUsers", (string)null);
                 });
 
             modelBuilder.Entity("appServicosCostura.Domain.Entities.Cliente", b =>
@@ -102,6 +102,14 @@ namespace appServicosCostura.Infrastructure.Migrations
                         .HasDefaultValue("")
                         .HasColumnName("endereco");
 
+                    b.Property<byte[]>("Foto")
+                        .HasColumnType("bytea")
+                        .HasColumnName("foto");
+
+                    b.Property<string>("FotoContentType")
+                        .HasColumnType("text")
+                        .HasColumnName("foto_content_type");
+
                     b.Property<string>("Nome")
                         .IsRequired()
                         .HasMaxLength(150)
@@ -137,7 +145,7 @@ namespace appServicosCostura.Infrastructure.Migrations
 
                     b.HasIndex("Telefone");
 
-                    b.ToTable("Clientes", (string)null);
+                    b.ToTable("clientes", (string)null);
                 });
 
             modelBuilder.Entity("appServicosCostura.Domain.Entities.Profissional", b =>
@@ -151,12 +159,6 @@ namespace appServicosCostura.Infrastructure.Migrations
                         .HasMaxLength(100)
                         .HasColumnType("character varying(100)")
                         .HasColumnName("bairro");
-
-                    b.Property<string>("Categoria")
-                        .IsRequired()
-                        .HasMaxLength(100)
-                        .HasColumnType("character varying(100)")
-                        .HasColumnName("categoria");
 
                     b.Property<string>("Cep")
                         .IsRequired()
@@ -185,6 +187,14 @@ namespace appServicosCostura.Infrastructure.Migrations
                         .HasColumnType("character varying(200)")
                         .HasColumnName("endereco");
 
+                    b.Property<byte[]>("Foto")
+                        .HasColumnType("bytea")
+                        .HasColumnName("foto");
+
+                    b.Property<string>("FotoContentType")
+                        .HasColumnType("text")
+                        .HasColumnName("foto_content_type");
+
                     b.Property<string>("Nome")
                         .IsRequired()
                         .HasMaxLength(150)
@@ -200,11 +210,6 @@ namespace appServicosCostura.Infrastructure.Migrations
                         .HasMaxLength(200)
                         .HasColumnType("character varying(200)")
                         .HasColumnName("ponto_referencia");
-
-                    b.Property<decimal>("PrecoBase")
-                        .HasPrecision(10, 2)
-                        .HasColumnType("numeric(10,2)")
-                        .HasColumnName("preco_base");
 
                     b.Property<string>("SenhaHash")
                         .IsRequired()
@@ -235,7 +240,63 @@ namespace appServicosCostura.Infrastructure.Migrations
 
                     b.HasIndex("Telefone");
 
-                    b.ToTable("Profissionais", (string)null);
+                    b.ToTable("profissionais", (string)null);
+                });
+
+            modelBuilder.Entity("appServicosCostura.Domain.Entities.TipoPeca", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .HasColumnType("uuid")
+                        .HasColumnName("id");
+
+                    b.Property<bool>("Ativo")
+                        .HasColumnType("boolean")
+                        .HasColumnName("ativo");
+
+                    b.Property<DateTime>("CriadoEmUtc")
+                        .HasColumnType("timestamp with time zone")
+                        .HasColumnName("criado_em_utc");
+
+                    b.Property<string>("Nome")
+                        .IsRequired()
+                        .HasMaxLength(100)
+                        .HasColumnType("character varying(100)")
+                        .HasColumnName("nome");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("Nome")
+                        .IsUnique();
+
+                    b.ToTable("tipospecas", (string)null);
+                });
+
+            modelBuilder.Entity("appServicosCostura.Domain.Entities.TipoServico", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .HasColumnType("uuid")
+                        .HasColumnName("id");
+
+                    b.Property<bool>("Ativo")
+                        .HasColumnType("boolean")
+                        .HasColumnName("ativo");
+
+                    b.Property<DateTime>("CriadoEmUtc")
+                        .HasColumnType("timestamp with time zone")
+                        .HasColumnName("criado_em_utc");
+
+                    b.Property<string>("Nome")
+                        .IsRequired()
+                        .HasMaxLength(100)
+                        .HasColumnType("character varying(100)")
+                        .HasColumnName("nome");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("Nome")
+                        .IsUnique();
+
+                    b.ToTable("tiposservicos", (string)null);
                 });
 #pragma warning restore 612, 618
         }

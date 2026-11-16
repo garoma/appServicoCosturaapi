@@ -98,6 +98,14 @@ builder.Services.AddAuthorization();
 
 var app = builder.Build();
 
+using (var scope = app.Services.CreateScope())
+{
+    var catalogoSeeder = scope.ServiceProvider
+        .GetRequiredService<CatalogoSeeder>();
+
+    await catalogoSeeder.SeedAsync();
+}
+
 app.UseCors("FrontendappServicosCostura");
 
 if (app.Environment.IsDevelopment())

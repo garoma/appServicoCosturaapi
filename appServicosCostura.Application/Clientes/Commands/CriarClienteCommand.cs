@@ -1,5 +1,4 @@
-﻿
-using MediatR;
+﻿using MediatR;
 
 namespace appServicosCostura.Application.Clientes.Commands;
 
@@ -12,5 +11,7 @@ public sealed record CriarClienteCommand(
     string? Bairro = null,
     string? Cidade = null,
     string? Cep = null,
-    string? PontoReferencia = null
+    string? PontoReferencia = null,
+    byte[]? Foto = null,
+    string? FotoContentType = null
 ) : IRequest<Guid>;

@@ -1,5 +1,4 @@
-﻿
-using MediatR;
+﻿using MediatR;
 
 namespace appServicosCostura.Application.Profissionais.Commands;
 
@@ -13,8 +12,8 @@ public sealed record CriarProfissionalCommand(
     string Cidade,
     string Cep,
     string? PontoReferencia,
-    string Categoria,
-    decimal PrecoBase,
     List<string> Servicos,
-    List<string> Pecas
+    List<string> Pecas,
+    byte[]? Foto = null,
+    string? FotoContentType = null
 ) : IRequest<Guid>;

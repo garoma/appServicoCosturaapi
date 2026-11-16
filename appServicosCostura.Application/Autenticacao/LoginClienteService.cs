@@ -60,12 +60,18 @@ public sealed class LoginClienteService(
 
         var (token, expiraEmUtc) = tokenService.GerarToken(usuario);
 
+
         return new LoginClienteResult(
             cliente.Id,
             token,
             expiraEmUtc,
             cliente.Nome,
             cliente.Telefone ?? string.Empty,
-            cliente.Email ?? string.Empty);
+            cliente.Email ?? string.Empty,
+            cliente.Foto is not null
+                ? Convert.ToBase64String(cliente.Foto)
+                : null,
+            cliente.FotoContentType);
+
     }
 }

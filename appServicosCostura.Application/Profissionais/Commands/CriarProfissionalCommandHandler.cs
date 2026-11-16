@@ -53,13 +53,6 @@ public sealed class CriarProfissionalCommandHandler
         if (string.IsNullOrWhiteSpace(request.Cep))
             throw new ArgumentException("O CEP é obrigatório.");
 
-        if (string.IsNullOrWhiteSpace(request.Categoria))
-            throw new ArgumentException("A categoria é obrigatória.");
-
-        if (request.PrecoBase < 0)
-            throw new ArgumentException(
-                "O preço base não pode ser negativo.");
-
         if (request.Servicos is null || request.Servicos.Count == 0)
             throw new ArgumentException(
                 "Informe pelo menos um serviço realizado.");
@@ -104,8 +97,6 @@ public sealed class CriarProfissionalCommandHandler
         var profissional = new Profissional(
             request.Nome,
             request.Telefone,
-            request.Categoria,
-            request.PrecoBase,
             request.Email,
             request.Endereco,
             request.Bairro,
@@ -114,6 +105,13 @@ public sealed class CriarProfissionalCommandHandler
             request.PontoReferencia,
             request.Servicos,
             request.Pecas);
+
+        if (request.Foto is not null)
+        {
+            profissional.DefinirFoto(
+                request.Foto,
+                request.FotoContentType);
+        }
 
         var senhaHash = _passwordHasher.HashPassword(
             profissional,

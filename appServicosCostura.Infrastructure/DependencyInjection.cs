@@ -37,6 +37,9 @@ public static class DependencyInjection
         services.AddScoped<AdminSeeder>();
         services.AddScoped<IClienteRepository, ClienteRepository>();
         services.AddScoped<IProfissionalRepository, ProfissionalRepository>();
+        services.AddScoped<ITipoServicoRepository, TipoServicoRepository>();
+        services.AddScoped<ITipoPecaRepository, TipoPecaRepository>();
+        services.AddScoped<CatalogoSeeder>();
         return services;
     }
 }

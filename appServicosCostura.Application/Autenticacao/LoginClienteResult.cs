@@ -7,4 +7,6 @@ public sealed record LoginClienteResult(
     DateTime ExpiraEmUtc,
     string Nome,
     string Telefone,
-    string Email);
+    string Email,
+    string? Foto,
+    string? FotoContentType);

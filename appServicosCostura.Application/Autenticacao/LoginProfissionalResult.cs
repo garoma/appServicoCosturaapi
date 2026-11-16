@@ -1,4 +1,5 @@
-﻿namespace appServicosCostura.Application.Autenticacao;
+﻿
+namespace appServicosCostura.Application.Autenticacao;
 
 public sealed record LoginProfissionalResult(
     Guid ProfissionalId,
@@ -7,5 +8,6 @@ public sealed record LoginProfissionalResult(
     string Nome,
     string Telefone,
     string Email,
-    string Categoria,
-    string Perfil);
+    string Perfil,
+    string? Foto,
+    string? FotoContentType);

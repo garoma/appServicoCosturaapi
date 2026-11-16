@@ -76,6 +76,15 @@ public sealed class ClienteConfiguration
             .HasColumnName("ponto_referencia")
             .HasMaxLength(200);
 
+        // Foto do profissional
+        builder.Property(p => p.Foto)
+            .HasColumnName("foto")
+            .HasColumnType("bytea");
+
+        builder.Property(p => p.FotoContentType)
+            .HasColumnName("foto_content_type")
+            .HasColumnType("text");
+
         builder.HasIndex(p => p.Telefone);
     }
 }

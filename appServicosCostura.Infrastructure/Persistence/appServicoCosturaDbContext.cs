@@ -12,6 +12,8 @@ public sealed class appServicosCosturaDbContext(
 
     public DbSet<Cliente> Clientes => Set<Cliente>();
     public DbSet<Profissional> Profissionais => Set<Profissional>();
+    public DbSet<TipoServico> TiposServicos => Set<TipoServico>();
+    public DbSet<TipoPeca> TiposPecas => Set<TipoPeca>();
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {

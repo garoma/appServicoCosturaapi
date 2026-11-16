@@ -1,0 +1,23 @@
+Exemplo: confecção deseja produzir 100 calças jeans
+
+1. Assina o plano de cliente   
+   Paga R$ 50 mensais.
+
+2. Escolhe um modelo oficial   
+   Seleciona Calça Jeans Completa.
+
+3. Compra a licença   
+   Paga R$ 50 para abrir o lote de 100 peças.
+
+4. Inicia a fabricação   
+   O sistema cria todas as etapas previstas no modelo.
+
+5. Contrata os profissionais   
+   Pode contratar corte, bolso, cós, costura, travete, lavanderia e outros serviços.
+
+6. Acompanha a fabricação   
+   Visualiza os status e o progresso até a conclusão.
+
+
+Investimento no aplicativo no primeiro mês
+R$ 100,00

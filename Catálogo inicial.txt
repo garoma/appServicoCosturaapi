@@ -1,0 +1,19 @@
+Catálogo inicial
+15 selecionados
+
+Você pode marcar os serviços que deseja cadastrar primeiro.
+[x] Corte
+[x] Enfesto e risco
+[x] Bolso
+[x] Traseira
+[x] Cós
+[x] Costura reta
+[x] Overloque
+[x] Galoneira
+[x] Travete
+[x] Caseado
+[x] Aplicação de botão e rebite
+[x] Aplicação de zíper
+[x] Bainha e acabamento
+[x] Lavanderia
+[x] Revisão e passadoria

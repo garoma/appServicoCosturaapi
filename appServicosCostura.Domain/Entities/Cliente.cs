@@ -28,6 +28,10 @@ public class Cliente
 
     public string? PontoReferencia { get; private set; }
 
+    public byte[]? Foto { get; private set; }
+
+    public string? FotoContentType { get; private set; }
+
     protected Cliente()
     {
     }
@@ -111,5 +115,11 @@ public class Cliente
         PontoReferencia = string.IsNullOrWhiteSpace(pontoReferencia)
             ? null
             : pontoReferencia.Trim();
+    }
+
+    public void DefinirFoto(byte[]? foto, string? contentType)
+    {
+        Foto = foto;
+        FotoContentType = foto is null ? null : contentType;
     }
 }

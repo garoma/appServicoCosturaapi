@@ -1,0 +1,64 @@
+1. Tabela de preços proposta
+Período	Cliente/mês	Profissional/mês
+Meses 1 a 6	R$ 10	R$ 10
+Meses 7 a 12	R$ 20	R$ 20
+Meses 13 a 18	R$ 30	R$ 30
+Meses 19 a 24	R$ 40	R$ 40
+A partir do mês 25	R$ 50	R$ 50
+
+O gerenciamento de fabricação permanece separado:
+- R$ 50 por lote de até 100 peças.
+- Sem comissão sobre serviços contratados.
+- Acompanhamento do lote até a conclusão.
+2. Política de reajuste
+Eu colocaria a seguinte regra nos termos de adesão:
+Política de Mensalidades e Reajustes
+A plataforma oferece condições comerciais promocionais de lançamento, com mensalidade inicial de R$ 10,00 para clientes e profissionais, pelo período de seis meses.
+
+Após esse período, a mensalidade poderá ser reajustada progressivamente, conforme a política comercial vigente.
+
+Os valores de referência previstos são:
+- R$ 10,00 por mês;
+- R$ 20,00 por mês;
+- R$ 30,00 por mês;
+- R$ 40,00 por mês;
+- R$ 50,00 por mês.
+Condições de reajuste:
+1. Os valores e períodos apresentados representam a política comercial inicial da plataforma.
+2. O administrador poderá alterar os valores, períodos promocionais e condições comerciais.
+3. Qualquer alteração que afete o valor da assinatura será comunicada previamente aos usuários.
+4. O novo valor será aplicado somente após a comunicação e conforme as condições contratuais e a legislação aplicável.
+5. O usuário poderá cancelar sua assinatura antes da entrada em vigor do novo valor, observadas as regras de cancelamento.
+A contratação e a permanência na plataforma representam a aceitação das condições comerciais apresentadas no momento da adesão.
+
+
+
+
+Um cuidado jurídico: não recomendo escrever que o administrador pode alterar preços a qualquer momento e aplicá-los imediatamente. É melhor reservar o direito de alterar a política, mas garantir comunicação prévia e respeito às regras de defesa do consumidor.
+3. Como implementar no painel ADM
+Eu criaria uma tela chamada Configurações Comerciais.
+Configurações de assinatura
+Mensalidade atual
+Ativa
+
+R$ 10,00
+
+Preço por categoria
+Categoria	Valor
+Cliente	R$ 10,00
+Profissional	R$ 10,00
+
+
+Gerenciamento de fabricação
+Item	Valor
+Lote até 100 peças	R$ 50,00
+Comissão de serviços	0%
+
+
+Controle administrativo
+- Alterar mensalidades.
+- Definir início e fim de promoções.
+- Programar reajustes.
+- Consultar histórico de alterações.
+- Definir quando o novo preço entra em vigor.
+

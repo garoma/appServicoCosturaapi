@@ -55,6 +55,7 @@ public sealed class LoginProfissionalService(
 
         var (token, expiraEmUtc) = tokenService.GerarToken(usuario);
 
+
         return new LoginProfissionalResult(
             profissional.Id,
             token,
@@ -62,7 +63,10 @@ public sealed class LoginProfissionalService(
             profissional.Nome,
             profissional.Telefone,
             profissional.Email ?? string.Empty,
-            profissional.Categoria,
-            "profissional");
+            "profissional",
+            profissional.Foto is not null
+                ? Convert.ToBase64String(profissional.Foto)
+                : null,
+            profissional.FotoContentType);
     }
 }

@@ -1,0 +1,43 @@
+Calça jeans
+1. Corte.
+2. Preparação dos bolsos.
+3. Costura dianteira.
+4. Costura traseira.
+5. Fechamento.
+6. Aplicação do cós.
+7. Travete e caseado.
+8. Lavanderia.
+9. Aplicação de botões e etiquetas.
+10. Revisão e embalagem.
+
+Short jeans
+1. Corte.
+2. Preparação dos bolsos.
+3. Costura.
+4. Fechamento lateral.
+5. Aplicação do cós.
+6. Bainha.
+7. Caseado e travete.
+8. Lavanderia.
+9. Revisão e embalagem.
+
+Blusa feminina
+1. Corte.
+2. Preparação das partes.
+3. Costura dos ombros.
+4. Aplicação de mangas.
+5. Fechamento lateral.
+6. Gola ou acabamento do decote.
+7. Bainha.
+8. Revisão e embalagem.
+
+Jaqueta jeans
+1. Corte.
+2. Preparação dos bolsos.
+3. Montagem das costas.
+4. Montagem das mangas.
+5. Aplicação da gola.
+6. Fechamento.
+7. Aplicação de botões.
+8. Lavanderia.
+9. Revisão e embalagem.

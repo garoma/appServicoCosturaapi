@@ -53,6 +53,13 @@ public sealed class CriarClienteCommandHandler
             request.Cep,
             request.PontoReferencia);
 
+        if (request.Foto is not null)
+        {
+            cliente.DefinirFoto(
+                request.Foto,
+                request.FotoContentType);
+        }
+
         var senhaHash = _passwordHasher.HashPassword(
             cliente,
             request.Senha);

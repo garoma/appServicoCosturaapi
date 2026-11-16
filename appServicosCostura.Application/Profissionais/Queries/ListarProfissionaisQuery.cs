@@ -15,8 +15,6 @@ public sealed record ListarProfissionaisResult(
     string Status,
     string Bairro,
     string Cidade,
-    string Categoria,
-    decimal PrecoBase,
     List<string> Servicos,
     List<string> Pecas
 );
@@ -50,8 +48,6 @@ public sealed class ListarProfissionaisQueryHandler
                 profissional.Status,
                 profissional.Bairro,
                 profissional.Cidade,
-                profissional.Categoria,
-                profissional.PrecoBase,
                 profissional.Servicos,
                 profissional.Pecas
             )).ToList();
